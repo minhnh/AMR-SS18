@@ -1,14 +1,14 @@
 # Autonomous Mobile Robots - SS18
 
-##1. Prerequisites
+## 1. Prerequisites
 
 You can find a shell script that will install all dependencies [here].
 
-###1.1 ROS Kinetic
+### 1.1 ROS Kinetic
 
 Install ROS via the script or following the installation instructions for [ROS].
 
-###1.2 Catkin workspace
+### 1.2 Catkin workspace
 
 Make sure you initialized your catkin workspace:
 
@@ -21,7 +21,7 @@ catkin_init_workspace
 cd ..
 catkin_make
 ```
-###1.3 Bugfix for Stage and KDL
+### 1.3 Bugfix for Stage and KDL
 
 For the amr packages to work you will need to apply the bugfix provided [here].
 
@@ -29,13 +29,13 @@ For the amr packages to work you will need to apply the bugfix provided [here].
 [ROS]: https://wiki.ros.org/kinetic/Installation/Ubuntu
 [here]: https://github.com/HBRS-AMR/AMR-Wiki
 
-##2. Using the amr packages
+## 2. Using the amr packages
 
 Clone this repository into the src folder of your catkin workspace.
 
 Then go to the root folder of your catkin workspace and execute ```catkin_make``` in a terminal. Don't forget to source your workspace.
 
-##3. Assignments
+## 3. Assignments
 
 When solving assignments please use the following guidelines:
 
