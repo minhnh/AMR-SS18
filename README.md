@@ -1,53 +1,26 @@
 # Autonomous Mobile Robots - SS18
 
-## 1. Prerequisites
+## 1. Course Description and Prerequisites
 
-You can find a shell script that will install all dependencies [here].
+You can find general information about the course and the prerequisites at the [wiki].
 
-### 1.1 ROS Kinetic
+[wiki]: https://github.com/HBRS-AMR/AMR-Wiki/
 
-Install ROS via the script or following the installation instructions for [ROS].
+## 2. Setting up your repository
 
-### 1.2 Catkin workspace
+### 2.1 Catkin workspace
 
-Make sure you initialized your catkin workspace:
-
-```
-mkdir catkin_ws
-cd catkin_ws
-mkdir src
-cd src
-catkin_init_workspace
-cd ..
-catkin_make
-```
-### 1.3 Bugfix for Stage and KDL
-
-For the amr packages to work you will need to apply the bugfix provided [here].
-
-
-[ROS]: https://wiki.ros.org/kinetic/Installation/Ubuntu
-[here]: https://github.com/HBRS-AMR/AMR-Wiki
-
-## 2. Using the amr packages
-
-Clone this repository into the src folder of your catkin workspace.
+Clone your repository into the src folder of your catkin workspace.
 
 Then go to the root folder of your catkin workspace and execute ```catkin_make``` in a terminal. Don't forget to source your workspace.
 
-## 3. Assignments
+### 2.2 Configuring your upstream
 
-When solving assignments please use the following guidelines:
-
-* Write readable code, this includes proper names for variables (e.g. wheel_speed_left instead of wsl) and functions (e.g. getDistanceToObstacle() instead of distance())
-* Follow the Python naming conventions ([Google Python Style Guide], [Python Style Guide])
-* Use short and descriptive commit messages (not like [this])
-* Commit frequently, don't commit the whole assignment in one go
-* Use a [git branching model], don't work on your master branch directly
-* Make sure to merge all your changes into the master branch before the deadline. Grading is based on your master branch at the time of the deadline. No late submissions.
-* Repositories are private to prevent plagiarism, if two people have the same code they'll both receive 0 points for the assignment
-
-[Google Python Style Guide]: https://google.github.io/styleguide/pyguide.html
-[this]: https://xkcd.com/1296/
-[Python Style Guide]: https://www.python.org/dev/peps/pep-0008/
-[git branching model]: https://nvie.com/posts/a-successful-git-branching-model/
+To set up the master repository at https://github.com/HBRS-AMR/AMR-SS18 as your upstream, go to the local clone of your repository, open a terminal and type the following:
+```
+git remote add AMR-SS18 https://github.com/HBRS-AMR/AMR-SS18
+```
+Make sure to pull from this upstream regularly to get the code for the new assignments:
+```
+git pull AMR-SS18 master
+```
