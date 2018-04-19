@@ -1,5 +1,8 @@
 # Autonomous Mobile Robots - SS18
 
+## Please replace this with your name and GitHub username
+* Tim Metzler @[tmetzl](http://github.com/tmetzl)
+
 ## 1. Course Description and Prerequisites
 
 You can find general information about the course and the prerequisites at the [wiki].
