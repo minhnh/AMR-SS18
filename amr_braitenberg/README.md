@@ -8,7 +8,7 @@ omni-directional youBot, the differential drive is simulated by the
 is implemented by the `braitenberg_vehicle` node.
 
 The launch file "*braitenberg.launch*" brings up the Stage simulator with
-"*Octopus*" world (which is well-suited for testing braitenberng vehicles),
+"*Octopus*" world (which is well-suited for testing braitenberg vehicles),
 both nodes from this package,  and dynamic reconfigure GUI.
 
 ![Octopus world](../amr_stage_worlds/bitmaps/octopus.png)
@@ -25,7 +25,7 @@ connection factors could be adjusted through the `reconfigure_gui`.
 ### Subscribed topics
 
 * `sonar_braitenberg` (*amr_msgs/Ranges*)
-  range readings from the pair of braitenber sonars
+  range readings from the pair of braitenberg sonars
 
 ### Published topics
 
