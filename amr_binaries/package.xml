@@ -1,0 +1,26 @@
+<package>
+  <name>amr_binaries</name>
+  <version>1.0.0</version>
+  <description>amr_binaries</description>
+  <maintainer email="alexander.hagg@inf.h-brs.de">Alexander Hagg</maintainer>
+
+  <license>BSD</license>
+
+  <url type="website"></url>
+
+  <author>Alexander Hagg</author>
+
+  <!-- Dependencies which this package needs to build itself. -->
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <!-- Dependencies needed to compile this package. -->
+  <build_depend>std_msgs</build_depend>
+  <build_depend>geometry_msgs</build_depend>
+
+  <!-- Dependencies needed after this package is compiled. -->
+  <run_depend>std_msgs</run_depend>
+  <run_depend>geometry_msgs</run_depend>
+
+  <!-- Dependencies needed only for running tests. -->
+
+</package>
