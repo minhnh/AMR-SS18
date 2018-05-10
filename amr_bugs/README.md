@@ -51,5 +51,29 @@ adjusted through the `reconfigure_gui`.
 * `~disable` (*std_srvs/Empty*)  
   stop the wallfollowing behavior
 
+bug2.py
+---------------
+
+### Action API
+
+The `bug2.py` node provides an implementation of the *SimpleActionServer* (see
+[actionlib][] documentation), that takes in goals containing
+*geometry_msgs/PoseStamped* messages. The user can communicate with the
+`bug2.py` node over ROS topics directly, but the recommended way to send goals
+is by using the *SimpleActionClient*.
+
+### Subscribed topics
+
+* `~move_to_simple/goal` (*geometry_msgs/PoseStamped*)  
+  provides a non-action interface for users that do not care about tracking the
+  execution status of their goals
+
+### Published topics
+
+* `~lines` (*visualization_msgs/Marker*)  
+  visualization of the lines that the Bug2 algorithm makes use of
+
+* `~waypoints` (*visualization_msgs/MarkerArray*)  
+  visualization of the waypoints that the Bug2 algorithm makes use of
 
 [actionlib]: http://www.ros.org/wiki/actionlib

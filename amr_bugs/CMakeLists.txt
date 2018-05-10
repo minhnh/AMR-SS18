@@ -18,6 +18,7 @@ find_package(catkin REQUIRED
     amr_msgs
     amr_srvs
     amr_stage
+    amr_perception
     amr_navigation
 )
 
@@ -85,6 +86,7 @@ catkin_package(
       amr_msgs
       amr_srvs
       amr_stage
+      amr_perception
       amr_navigation
     INCLUDE_DIRS
     LIBRARIES
