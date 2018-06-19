@@ -84,4 +84,31 @@ to send goals is by using the *SimpleActionClient*.
 * `~controller` (default: "omni")  
   velocity controller to use
 
+path\_executor.py
+-----------------
+
+This node allows to drive the robot through a path (list of poses). Depending on
+the settings the motion between the poses may involve local obstacle avoidance.
+
+### Action API
+
+The `path_executor` node provides an implementation of the
+*SimpleActionServer* (see [actionlib][] documentation), that takes in goals
+containing *nav_msgs/Path* messages. The user can communicate with it by using
+the *SimpleActionClient*.
+
+### Subscribed actions
+
+* `/motion_controller/move_to` (*amr_msgs/MoveToAction*)  
+  action to move the robot to a specific pose (no obstacle avoidance)
+
+* `/bug2/move_to` (*amr_msgs/MoveToAction*)  
+  action to move the robot to a specific pose (with Bug2 obstacle avoidance)
+
+### Parameters
+
+* `~use_obstacle_avoidance` (default: false)  
+  controls which provider of *[move_to]* action is used
+
+
 [actionlib]: http://www.ros.org/wiki/actionlib
