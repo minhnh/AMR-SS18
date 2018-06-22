@@ -25,8 +25,8 @@ class BugBrainVisualizer:
     """
     def __init__(self, brain):
         self.brain = brain
-        self.lines_pub = rospy.Publisher('bug2/lines', Marker)
-        self.waypoints_pub = rospy.Publisher('bug2/waypoints', MarkerArray)
+        self.lines_pub = rospy.Publisher('bug2/lines', Marker, queue_size=10)
+        self.waypoints_pub = rospy.Publisher('bug2/waypoints', MarkerArray, queue_size=30)
         self.timer = rospy.Timer(rospy.Duration(0.1), self.timer_cb)
         self.cm = ColorManager()
 
