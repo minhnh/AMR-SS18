@@ -17,7 +17,7 @@ class Plot:
     def __init__(self, title, w, h):
         self.gnuplot = Popen(['gnuplot', '-persist'], shell=False, stdin=PIPE, stderr=PIPE)
         self.gnuplot.stdin.write("set terminal wxt noraise size %i,%i\n" % (w, h))
-        self.gnuplot.stdin.write("set title '%s'\n" % self.title)
+        self.gnuplot.stdin.write("set title '%s'\n" % title)
 
     def update(self, data, width):
         self.gnuplot.stdin.write("set pm3d map\n")
