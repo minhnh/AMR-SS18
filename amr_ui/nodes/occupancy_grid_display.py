@@ -15,12 +15,11 @@ import argparse
 
 class Plot:
     def __init__(self, title, w, h):
-        self.gnuplot = Popen(['gnuplot'], shell=False, stdin=PIPE, stderr=PIPE)
-        self.gnuplot.stdin.write("set terminal wxt noraise size %i,%i" % (w, h))
-        self.title = title
+        self.gnuplot = Popen(['gnuplot', '-persist'], shell=False, stdin=PIPE, stderr=PIPE)
+        self.gnuplot.stdin.write("set terminal wxt noraise size %i,%i\n" % (w, h))
+        self.gnuplot.stdin.write("set title '%s'\n" % self.title)
 
     def update(self, data, width):
-        self.gnuplot.stdin.write("set title '%s'\n" % self.title)
         self.gnuplot.stdin.write("set pm3d map\n")
         self.gnuplot.stdin.write("splot '-' matrix\n")
         i = 0
